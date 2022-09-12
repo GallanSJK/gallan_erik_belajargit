@@ -20,7 +20,7 @@ def closeDb():
    cursor.close()
    conn.close()
 #fungsi view index() untuk menampilkan data dari database
-@application.route('/')
+@application.route('/', methods=['GET','POST'])
 def index():   
    openDb()
    container = []
